@@ -1,0 +1,25 @@
+name: General CI
+
+on: [pull_request, push]
+
+concurrency: 
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  package:
+    name: Build and Package VS Code Extension
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+    - name: Install Nodejs
+      uses: actions/setup-node@v1
+      with:
+        node-version: 18.x
+    - run: yarn install --frozen-lockfile
+    - run: yarn package
