@@ -31,7 +31,7 @@
                     "keid"
                 ],
                 "extensions": [
-                    ".kd"
+                    ".keid"
                 ],
                 "configuration": "./language-configuration.json",
                 "icon": {
