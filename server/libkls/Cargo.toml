@@ -1,0 +1,12 @@
+[package]
+name = "libkls"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+wasm-bindgen = "0.2"
+keid = { path = "../../../keid" }
+
+[lib]
+name = "libkls"
+crate-type = ["cdylib"]

@@ -22,6 +22,10 @@
     "categories": [
         "Programming Languages"
     ],
+    "main": "./client/out/extension",
+    "activationEvents": [
+        "onLanguage:keid"
+    ],
     "contributes": {
         "languages": [
             {
@@ -38,9 +42,6 @@
                     "light": "./images/logo.png",
                     "dark": "./images/logo.png"
                 }
-            },
-            {
-                "id": "keidmd-injection"
             }
         ],
         "grammars": [
@@ -55,7 +56,7 @@
         "vscode:prepublish": "yarn compile",
         "compile": "tsc -b",
         "watch": "tsc -b -w",
-        "postinstall": "cd client && yarn install && cd ..",
+        "postinstall": "cd client && yarn install && cd ../server && yarn install && cd ..",
         "package": "vsce package"
     },
     "devDependencies": {

@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+"@types/node@^18.15.11":
+  version "18.15.11"
+  resolved "https://art.spacex.corp/artifactory/api/npm/ex-npm-remote/@types/node/-/node-18.15.11.tgz#b3b790f09cb1696cffcec605de025b088fa4225f"
+  integrity sha512-E5Kwq2n4SbMzQOn6wnmBjuK9ouqlURrcZDVfbo9ftDDTFt3nk7ZKK4GMOzoYgnpQJKcxwQw+lGaBvvlMo0qN/Q==
+
 "@types/vscode@^1.52.0":
   version "1.64.0"
   resolved "https://registry.yarnpkg.com/@types/vscode/-/vscode-1.64.0.tgz#bfd82c8d92dc7824c1be084be1ab46ce20d7fb55"
