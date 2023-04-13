@@ -54,7 +54,7 @@
     },
     "scripts": {
         "vscode:prepublish": "yarn compile",
-        "compile": "tsc -b",
+        "compile": "cd server/libkls && wasm-pack build --target nodejs && cd ../.. && cp server/libkls/pkg/libkls* server/out  && tsc -b",
         "watch": "tsc -b -w",
         "postinstall": "cd client && yarn install && cd ../server && yarn install && cd ..",
         "package": "vsce package"
